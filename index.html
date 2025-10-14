@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wandsworth Driving School - Expert automatic and manual driving lessons in South London, South West London & Surrey. Patient instruction for nervous drivers, high pass rates, flexible hours. Book your lesson today!">
+    <title>Wandsworth Driving School | Expert Driving Lessons in South London</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f3057;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f3057 0%, #1a5490 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero-logo {
+            max-width: 350px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            background: #fbbf24;
+            color: #0f3057;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .hero .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+            background: #fcd34d;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 2rem;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0f3057;
+        }
+
+        section .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #0f3057;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8fafc;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text h3 {
+            color: #0f3057;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Services */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, #0f3057 0%, #1a5490 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: #f8fafc;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 3px solid transparent;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #fbbf24;
+            transform: translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            color: #0f3057;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .subtitle-small {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: #0f3057;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .pricing-card .description {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #fbbf24;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #0f3057;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #0f3057 0%, #1a5490 100%);
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact .subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            background: rgba(255,255,255,0.2);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .google-form-container {
+            background: white;
+            padding: 2rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .google-form-container h3 {
+            color: #0f3057;
+            margin-bottom: 0.8rem;
+            font-size: 1.7rem;
+        }
+
+        .google-form-container p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .contact-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact-feature {
+            text-align: center;
+            padding: 0.8rem 0.5rem;
+        }
+
+        .contact-feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-feature h4 {
+            color: #0f3057;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-feature p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .form-button-large {
+            display: inline-block;
+            background: #fbbf24;
+            color: #0f3057;
+            padding: 1.1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+
+        .form-button-large:hover {
+            transform: translateY(-3px);
+            background: #fcd34d;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+        }
+
+        .google-form-container iframe {
+            display: none;
+        }
+
+        .form-button {
+            display: block;
+            width: 100%;
+            background: #fbbf24;
+            color: #0f3057;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .form-button:hover {
+            transform: scale(1.05);
+            background: #fcd34d;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1f3d;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-logo {
+                max-width: 280px;
+            }
+
+            nav .logo {
+                font-size: 1.2rem;
+                gap: 0.5rem;
+            }
+
+            nav .logo img {
+                height: 35px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid,
+            .services-list,
+            .pricing-cards,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .contact-feature {
+                padding: 0.8rem;
+            }
+
+            .form-button-large {
+                padding: 1.1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            .google-form-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .google-form-container h3 {
+                font-size: 1.5rem;
+            }
+
+            .google-form-container iframe {
+                min-height: 1200px;
+            }
+        }
+
+        /* Extra small devices (iPhone 12 Pro and smaller) */
+        @media (max-width: 390px) {
+            /* Remove side padding on very small screens */
+            .container {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 60px 1rem;
+            }
+
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+
+            nav .container {
+                padding: 0 1rem;
+            }
+
+            nav .logo {
+                font-size: 1rem;
+                gap: 0.4rem;
+            }
+
+            nav .logo img {
+                height: 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                gap: 2rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .contact-item p {
+                font-size: 0.95rem;
+                word-break: break-word;
+            }
+
+            .google-form-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .google-form-container h3 {
+                font-size: 1.3rem;
+            }
+
+            .google-form-container p {
+                font-size: 0.95rem;
+            }
+
+            .form-button-large {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            .contact-feature-icon {
+                font-size: 1.5rem;
+            }
+
+            .contact-feature h4 {
+                font-size: 0.9rem;
+            }
+
+            .contact-feature p {
+                font-size: 0.8rem;
+            }
+
+            /* Fix text overflow */
+            .contact-item p,
+            .google-form-container p {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+
+            /* Ensure full width backgrounds */
+            .hero,
+            .about,
+            .pricing,
+            .contact {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            /* Make sure contact section stretches properly */
+            .contact {
+                padding: 60px 0;
+            }
+
+            .contact .container {
+                padding: 0 1rem;
+            }
+
+            .contact-info {
+                gap: 1.5rem;
+            }
+
+            /* Pricing cards on small screens */
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .price {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#top" class="logo">
+                <img src="logo-nav.png" alt="Wandsworth Driving School">
+                <span>Wandsworth Driving School</span>
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-logo">
+                <!-- Replace "logo-hero.png" with your actual logo filename -->
+                <img src="logo-hero.png" alt="Wandsworth Driving School Logo">
+            </div>
+            <h1>Learn to Drive with Confidence</h1>
+            <p>Expert Automatic & Manual Driving Lessons | South London, South West London & Surrey</p>
+            <a href="#contact" class="cta-button">Book Your First Lesson</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose">
+        <div class="container">
+            <h2>Why Choose Wandsworth Driving School?</h2>
+            <p class="subtitle">Professional instruction you can trust</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>High Pass Rate</h3>
+                    <p>Our students consistently achieve excellent results on their driving tests, thanks to thorough preparation and expert guidance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Patient with Nervous Drivers</h3>
+                    <p>We specialize in helping anxious learners build confidence behind the wheel in a calm, supportive environment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Automatic & Manual</h3>
+                    <p>Learn in either a modern automatic or manual car - your choice! We provide quality instruction for both transmission types.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🕐</div>
+                    <h3>Flexible Hours</h3>
+                    <p>We work around your schedule with lessons available evenings and weekends to fit your busy lifestyle.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Door-to-Door Service</h3>
+                    <p>Free pick-up and drop-off from your home, work, or college across South London, South West London & Surrey.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>ADI Training Available</h3>
+                    <p>Interested in becoming a driving instructor? We offer comprehensive training to help you start your new career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Your Instructor</h2>
+            <p class="subtitle">Experienced, qualified, and committed to your success</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Driving Instruction</h3>
+                    <p>Welcome to Wandsworth Driving School! We are a fully qualified ADI (Approved Driving Instructor) with years of experience helping learners across South London, South West London and Surrey achieve their driving goals.</p>
+                    
+                    <p>We understand that learning to drive can be daunting, especially if you're a nervous driver. That's why We have developed a patient, encouraging teaching style that helps you build confidence at your own pace. Whether you prefer automatic or manual transmission, We provide quality instruction tailored to your learning style.</p>
+                    
+                    <p>Based in Wandsworth and covering a wide area across South London, South West London and Surrey, We are passionate about road safety and creating competent, confident drivers who are prepared for a lifetime of safe driving.</p>
+                    
+                    <p><strong>Fully qualified ADI • Automatic & Manual • Patient instruction • Proven results</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="subtitle">Comprehensive driving instruction tailored to your needs</p>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Beginner Lessons</h3>
+                    <p>Complete beginners welcome! Start your driving journey with structured lessons designed to build your skills from the ground up.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Refresher Courses</h3>
+                    <p>Haven't driven in a while? Regain your confidence with tailored refresher lessons focusing on your specific needs.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Test Preparation</h3>
+                    <p>Get test-ready with focused preparation covering all aspects of the driving test, including mock tests and test routes.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Nervous Driver Specialist</h3>
+                    <p>Overcome driving anxiety with patient, understanding instruction in a calm and supportive learning environment.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Pass Plus</h3>
+                    <p>Newly qualified? Enhance your skills with Pass Plus training covering motorways, night driving, and adverse conditions.</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>ADI Training</h3>
+                    <p>Want to become a driving instructor? We provide comprehensive training to help you qualify as an ADI and start your career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Lesson Pricing</h2>
+            <p class="subtitle">Transparent, competitive rates with no hidden costs</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Single Lesson</h3>
+                    <p class="subtitle-small">(Based on 2 hour minimum lesson)</p>
+                    <div class="price">£37.50</div>
+                    <p class="description">Manual / Automatic<br>Price Per Hour</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Refresher Lesson</h3>
+                    <div class="price">£37.50</div>
+                    <p class="description">Manual / Automatic<br>Price Per Hour</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Fast Track</h3>
+                    <div class="price">£450</div>
+                    <p class="description">Manual / Automatic<br>12 Hours - Intensive Courses</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Fast Pass</h3>
+                    <div class="price">£865</div>
+                    <p class="description">Manual / Automatic<br>24 Hours - Intensive Courses</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Fast Forward</h3>
+                    <div class="price">£1,260</div>
+                    <p class="description">Manual / Automatic<br>36 Hours - Intensive Courses</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Intensive Assessment</h3>
+                    <div class="price">£80</div>
+                    <p class="description">Manual / Automatic<br>2 Hours Intensive Course Assessment</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Pass Plus</h3>
+                    <div class="price">£255</div>
+                    <p class="description">Manual / Automatic<br>6 Hours - (Other Driving Courses)</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Practical Driving Test</h3>
+                    <p class="subtitle-small">(Instructor and car hire charge separate to DVSA fee)</p>
+                    <div class="price">From £120</div>
+                    <p class="description">Manual / Automatic<br>(Other Driving Courses)</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Motorway Driving</h3>
+                    <div class="price">£135</div>
+                    <p class="description">Manual / Automatic<br>3 Hours (Other Driving Courses)</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem; color: #666;">
+                <strong>Coverage Area:</strong> South London, South West London & Surrey
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <p class="subtitle">Don't just take our word for it</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Learning to drive with Wandsworth Driving School has been a fantastic experience for myself and my wife. From day one, Mr. Ahsan's calm and supportive teaching style has helped us feel confident behind the wheel.
+                        He explains everything clearly, takes things step by step, and never rushes us, which makes each lesson stress free and productive. We’ve already seen real progress and genuinely enjoy our sessions.
+                        We highly recommend Mr. Ahsan to anyone wanting professional, patient, and confidence building driving lessons."</p>
+                    <p class="testimonial-author">- Athar K., Wandsworth</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Wandsworth Driving School exceeded my expectations. My instructor was patient, knowledgeable, and supportive throughout the entire process. I passed my test on the first try, thanks to their expert guidance. Highly recommend!"</p>
+                    <p class="testimonial-author">- Nadia M., Farnham</p>
+                </div>
+                
+               <!-- <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"After failing twice with another school, I switched to Wandsworth Driving School. The difference was night and day! Patient, clear instruction and I passed on my next attempt. Thank you!"</p>
+                    <p class="testimonial-author">- Priya K., Tooting</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Book Your First Lesson</h2>
+            <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>07507 510 108</p>
+                            <p><small>Monday - Sunday: 10am - 6pm</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>wandsworthdriveschool@gmail.com</p>
+                            <p><small>We'll respond within 24 hours</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Coverage Area</h3>
+                            <p>South London, South West London & Surrey</p>
+                            <!-- <p><small>Check if we cover your postcode in the booking form</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="google-form-container">
+                    <h3>📋 Ready to Start Learning?</h3>
+                    <p>Click below to fill out our quick booking form. We'll get back to you within 24 hours!</p>
+                    
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">⚡</div>
+                            <h4>Quick & Easy</h4>
+                            <p>Takes 2 minutes</p>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">🔒</div>
+                            <h4>Secure</h4>
+                            <p>Data protected</p>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="contact-feature-icon">✅</div>
+                            <h4>Fast Response</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://forms.gle/eaPP1P37wmHvWCNE8" target="_blank" class="form-button-large">Open Booking Form →</a>
+                    
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666;">
+                        <strong>Prefer to call or email?</strong><br>
+                        📞 <a href="tel:07507510108" style="color: #0f3057; text-decoration: none; font-weight: 600;">07507 510 108</a> | 
+                        ✉️ <a href="mailto:wandsworthdriveschool@gmail.com" style="color: #0f3057; text-decoration: none; font-weight: 600;">Email Us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Wandsworth Driving School. All rights reserved.</p>
+            <p>Fully Qualified ADI | Automatic & Manual Cars | South London, South West London & Surrey</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navUl = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            if (navUl.style.display === 'flex') {
+                navUl.style.display = 'none';
+            } else {
+                navUl.style.display = 'flex';
+                navUl.style.flexDirection = 'column';
+                navUl.style.position = 'absolute';
+                navUl.style.top = '100%';
+                navUl.style.left = '0';
+                navUl.style.right = '0';
+                navUl.style.background = '#0f3057';
+                navUl.style.padding = '1rem';
+                navUl.style.gap = '1rem';
+            }
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const postcode = document.getElementById('postcode').value;
+                const studentType = document.getElementById('studentType').value;
+                const carType = document.getElementById('carType').value;
+                const message = document.getElementById('message').value;
+                
+                // Replace this URL with your actual Google Form URL
+                const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
+                
+                // Open Google Form in new tab
+                window.open(googleFormUrl, '_blank');
+                
+                // Show confirmation message
+                alert('Thank you ' + name + '! We\'re opening our booking form for you. Please complete it and we\'ll get back to you within 24 hours.');
+                
+                // Optional: Reset form
+                // contactForm.reset();
+            });
+        }
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .service-item, .pricing-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
