@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674463803"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17674463803');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Wandsworth Driving School - Expert automatic and manual driving lessons in South London, South West London & Surrey. Patient instruction for nervous drivers, high pass rates, flexible hours. Book your lesson today!">
@@ -479,6 +490,48 @@
             background: #fcd34d;
         }
 
+        /* Cookie Notice */
+        .cookie-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 48, 87, 0.98);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            z-index: 10000;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+            display: none;
+        }
+
+        .cookie-notice.show {
+            display: block;
+        }
+
+        .cookie-notice a {
+            color: #fbbf24;
+            text-decoration: underline;
+        }
+
+        .cookie-notice button {
+            background: #fbbf24;
+            color: #0f3057;
+            border: none;
+            padding: 0.7rem 2rem;
+            margin-left: 1rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cookie-notice button:hover {
+            background: #fcd34d;
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         footer {
             background: #0a1f3d;
@@ -702,6 +755,15 @@
     </style>
 </head>
 <body>
+    <!-- Cookie Notice -->
+    <div class="cookie-notice" id="cookieNotice">
+        <p>
+            This site uses cookies to improve your experience and analyze traffic. By using this site, you agree to our use of cookies. 
+            <a href="https://policies.google.com/technologies/cookies" target="_blank">Learn more</a>
+            <button onclick="acceptCookies()">Accept</button>
+        </p>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="container">
@@ -952,7 +1014,7 @@
                         <div class="contact-icon">📞</div>
                         <div>
                             <h3>Phone</h3>
-                            <p><a href="tel:07507510108" style="color: white; text-decoration: none;">07507 510 108</a></p>
+                            <p><a href="tel:07507510108" style="color: white; text-decoration: none;" onclick="trackPhoneClick('contact_section')">07507 510 108</a></p>
                             <p><small>Monday - Sunday: 10am - 6pm</small></p>
                         </div>
                     </div>
@@ -998,11 +1060,11 @@
                         </div>
                     </div>
                     
-                    <a href="https://forms.gle/UpVxYzxeSwjbR68H9" target="_blank" class="form-button-large">Open Booking Form →</a>
+                    <a href="https://forms.gle/UpVxYzxeSwjbR68H9" target="_blank" class="form-button-large" onclick="trackFormClick()">Open Booking Form →</a>
                     
                     <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666;">
                         <strong>Prefer to call or email?</strong><br>
-                        📞 <a href="tel:07507510108" style="color: #0f3057; text-decoration: none; font-weight: 600;">07507 510 108</a> | 
+                        📞 <a href="tel:07507510108" style="color: #0f3057; text-decoration: none; font-weight: 600;" onclick="trackPhoneClick('footer_link')">07507 510 108</a> |
                         ✉️ <a href="mailto:info@wandsworthdrivingschool.com" style="color: #0f3057; text-decoration: none; font-weight: 600;">Email Us</a>
                     </p>
                 </div>
@@ -1019,7 +1081,47 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Cookie Notice Functions
+        function showCookieNotice() {
+            const cookieConsent = localStorage.getItem('cookieConsent');
+            if (!cookieConsent) {
+                document.getElementById('cookieNotice').classList.add('show');
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieNotice').classList.remove('show');
+        }
+
+        // Show cookie notice on page load
+        window.addEventListener('load', showCookieNotice);
+
+        // Track Google Form Click
+        function trackFormClick() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_click', {
+                    'event_category': 'engagement',
+                    'event_label': 'google_form_booking',
+                    'value': 1
+                });
+                console.log('Form click tracked!');
+            }
+        }
+
+        // Track Phone Number Click
+        function trackPhoneClick(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'contact',
+                    'event_label': location,
+                    'value': 1
+                });
+                console.log('Phone click tracked from:', location);
+            }
+        }
+
+        // Smooth scrolling for navigation links (YOUR EXISTING CODE CONTINUES HERE)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
